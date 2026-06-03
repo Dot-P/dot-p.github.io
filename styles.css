@@ -7,7 +7,7 @@
   --paper-ink: #18243f;
   --muted: #e4ecff;
   --line: #f8fbff;
-  --gold: #7bbcff;
+  --gold: #ffd45e;
   --mint: #8bd6ff;
   --sky: #dceeff;
   --coral: #2f72d9;
@@ -165,6 +165,12 @@ img {
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.hero-content > .eyebrow,
+.section-heading .eyebrow,
+.vision-copy .eyebrow {
+  color: #15468f;
 }
 
 h1,
