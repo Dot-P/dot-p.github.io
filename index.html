@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Naoki Araake | Active Vision Portfolio</title>
+    <meta
+      name="description"
+      content="荒明 尚輝 / Naoki Araake のポートフォリオ。Active Vision, Physical AI, 3D scene affordance segmentation, robot-controlled viewpoints."
+    />
+    <meta property="og:title" content="Naoki Araake | Active Vision Portfolio" />
+    <meta
+      property="og:description"
+      content="Passive perception recognizes what is given. Active perception seeks the information needed for action."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#071216" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas class="vision-field" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Naoki Araake home">
+        <span class="brand-mark">NA</span>
+        <span>Naoki Araake</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#research">Research</a>
+        <a href="#motivation">Motivation</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#profile">Profile</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">M1 @ Kyoto University / Taniguchi Laboratory</p>
+          <h1>荒明 尚輝<br /><span>Naoki Araake</span></h1>
+          <p class="lead">
+            Active Vision と Physical AI を通して、ロボットが「行動に必要な情報」を自ら取りにいく世界を探っています。
+          </p>
+          <div class="hero-actions" aria-label="Portfolio links">
+            <a class="button primary" href="#research">Explore Research</a>
+            <a class="button ghost" href="#timeline">View Journey</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Active vision visualization">
+          <div class="viewport-stage">
+            <div class="camera camera-a">
+              <span></span>
+            </div>
+            <div class="camera camera-b">
+              <span></span>
+            </div>
+            <div class="camera camera-c">
+              <span></span>
+            </div>
+            <div class="robot-core">
+              <div class="robot-eye"></div>
+            </div>
+            <div class="point-cloud">
+              <i style="--x: 12%; --y: 18%; --d: 0s"></i>
+              <i style="--x: 22%; --y: 62%; --d: .3s"></i>
+              <i style="--x: 30%; --y: 36%; --d: .6s"></i>
+              <i style="--x: 42%; --y: 72%; --d: .2s"></i>
+              <i style="--x: 52%; --y: 26%; --d: .8s"></i>
+              <i style="--x: 63%; --y: 58%; --d: .1s"></i>
+              <i style="--x: 72%; --y: 34%; --d: .5s"></i>
+              <i style="--x: 82%; --y: 66%; --d: .4s"></i>
+              <i style="--x: 88%; --y: 22%; --d: .7s"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="statement section reveal">
+        <p>Passive perception recognizes what is given.</p>
+        <h2>Active perception seeks the information needed for action.</h2>
+      </section>
+
+      <section id="research" class="section split">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Research Focus</p>
+          <h2>From fixed cameras to robot-controlled viewpoints.</h2>
+        </div>
+        <div class="research-grid">
+          <article class="card reveal">
+            <span class="card-kicker">Previous Research</span>
+            <h3>3D scene affordance segmentation using point clouds</h3>
+            <p>
+              3D 点群からシーン内のアフォーダンスを読み取り、環境の中で「何ができるか」を認識する研究に取り組みました。
+            </p>
+          </article>
+          <article class="card reveal">
+            <span class="card-kicker">Current Research</span>
+            <h3>Active Vision</h3>
+            <p>
+              固定カメラで与えられた情報を受け取るだけでなく、ロボットが遮蔽を減らす視点を選び、操作に必要な情報を獲得する知能を目指しています。
+            </p>
+          </article>
+          <article class="card wide reveal">
+            <span class="card-kicker">Problem Framing</span>
+            <h3>Multi-view perception should not depend on many fixed cameras.</h3>
+            <p>
+              VLA は固定カメラ視点に依存しがちです。ActiveVLA のような multi-view 表現は精密操作を助けますが、複数固定カメラを前提にするのは実世界では強い仮定です。
+              だからこそ、ロボット自身が必要な視点を制御する Active Vision に惹かれています。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="motivation" class="section motivation">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Motivation</p>
+          <h2>Daily automation, extended into the physical world.</h2>
+        </div>
+        <div class="motivation-list">
+          <div class="motivation-item reveal">
+            <span>01</span>
+            <p>日常生活にある不要な作業を減らしたい。</p>
+          </div>
+          <div class="motivation-item reveal">
+            <span>02</span>
+            <p>プログラミングは、退屈なタスクを自動化できる手段として魅力的でした。</p>
+          </div>
+          <div class="motivation-item reveal">
+            <span>03</span>
+            <p>Physical AI は、その自動化を物理世界へ広げるための鍵だと考えています。</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="timeline" class="section timeline-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Journey</p>
+          <h2>Learning by building, researching, and shipping.</h2>
+        </div>
+        <ol class="timeline">
+          <li class="reveal"><time>2022.04</time><span>東京理科大学 入学</span></li>
+          <li class="reveal"><time>2023.11</time><span>技育キャンプアドバンス ウィングアーク1st 企業賞</span></li>
+          <li class="reveal"><time>2023.12</time><span>株式会社Nebraska インターン / 無人書店</span></li>
+          <li class="reveal"><time>2024.05</time><span>葛飾キャンパスロッカープロジェクト</span></li>
+          <li class="reveal"><time>2024.08</time><span>株式会社バンダイナムコホールディングス インターン</span></li>
+          <li class="reveal"><time>2024.08</time><span>株式会社サイバーエージェント インターン</span></li>
+          <li class="reveal"><time>2025.09</time><span>株式会社Infodeliver インターン / MCPサーバー構築</span></li>
+          <li class="reveal"><time>2026.03</time><span>東京理科大学工学部情報工学科 優秀学生賞</span></li>
+          <li class="reveal"><time>Now</time><span>京都大学 谷口研究室 / Active Vision</span></li>
+        </ol>
+      </section>
+
+      <section id="profile" class="section profile">
+        <div class="profile-card reveal">
+          <div>
+            <p class="eyebrow">Profile</p>
+            <h2>Naoki Araake / 荒明 尚輝</h2>
+            <p>
+              群馬県出身、22歳。東京理科大学で 3D scene affordance segmentation using point clouds に取り組み、
+              現在は京都大学大学院情報学研究科 谷口研究室で Active Vision を研究しています。
+            </p>
+          </div>
+          <dl>
+            <div><dt>From</dt><dd>Gunma</dd></div>
+            <div><dt>Age</dt><dd>22</dd></div>
+            <div><dt>Previous</dt><dd>Tokyo University of Science / Irie Lab</dd></div>
+            <div><dt>Current</dt><dd>Kyoto University / Symbol Emergence Systems Group</dd></div>
+          </dl>
+        </div>
+
+        <div class="source-panel reveal">
+          <h3>Affiliations & Sources</h3>
+          <a href="https://www.rs.tus.ac.jp/prmi/">Tokyo University of Science / Irie Lab</a>
+          <a href="https://ses.ist.i.kyoto-u.ac.jp/members/">Kyoto University / Taniguchi Laboratory</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Naoki Araake</span>
+      <span>Active Vision / Physical AI / Robot-controlled viewpoints</span>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
