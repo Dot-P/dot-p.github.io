@@ -1,19 +1,19 @@
 :root {
-  --field: #77bf57;
-  --field-dark: #3f7e42;
-  --window: #173c8e;
-  --window-2: #102866;
-  --ink: #fff7d6;
-  --paper-ink: #1b2c2e;
-  --muted: #dbe8ff;
-  --line: #fff7d6;
+  --field: #fbfaf2;
+  --field-dark: #e7ead8;
+  --window: #16438f;
+  --window-2: #102b69;
+  --ink: #fff8df;
+  --paper-ink: #18243f;
+  --muted: #e4ecff;
+  --line: #fff8df;
   --gold: #ffd45e;
-  --mint: #73d36f;
+  --mint: #67bd61;
   --sky: #86c9ef;
   --coral: #e86f4d;
-  --stone: #b2b18d;
-  --stone-dark: #6e715f;
-  --pixel-shadow: 6px 6px 0 #10224f;
+  --stone: #d2cfaa;
+  --stone-dark: #88886e;
+  --pixel-shadow: 6px 6px 0 rgba(16, 34, 79, 0.28);
 }
 
 * {
@@ -31,15 +31,13 @@ body {
   color: var(--paper-ink);
   background-color: var(--field);
   background-image:
-    linear-gradient(45deg, rgba(24, 92, 38, 0.22) 25%, transparent 25%),
-    linear-gradient(-45deg, rgba(255, 247, 214, 0.18) 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, rgba(24, 92, 38, 0.2) 75%),
-    linear-gradient(-45deg, transparent 75%, rgba(255, 247, 214, 0.12) 75%),
-    radial-gradient(circle at 18% 10%, rgba(255, 212, 94, 0.35), transparent 18rem),
-    radial-gradient(circle at 86% 12%, rgba(134, 201, 239, 0.28), transparent 20rem),
-    linear-gradient(180deg, #a8df6a 0%, #77bf57 42%, #5ba64c 100%);
-  background-position: 0 0, 0 12px, 12px -12px, -12px 0, 0 0, 0 0, 0 0;
-  background-size: 24px 24px, 24px 24px, 24px 24px, 24px 24px, auto, auto, auto;
+    linear-gradient(90deg, rgba(22, 67, 143, 0.04) 2px, transparent 2px),
+    linear-gradient(rgba(22, 67, 143, 0.04) 2px, transparent 2px),
+    radial-gradient(circle at 15% 10%, rgba(255, 212, 94, 0.28), transparent 18rem),
+    radial-gradient(circle at 86% 16%, rgba(103, 189, 97, 0.2), transparent 22rem),
+    linear-gradient(180deg, #fffdf6 0%, #fbfaf2 48%, #f2f6e9 100%);
+  background-position: 0 0, 0 0, 0 0, 0 0, 0 0;
+  background-size: 28px 28px, 28px 28px, auto, auto, auto;
   font-family: "MS Gothic", "Yu Gothic UI", "Noto Sans JP", monospace;
   letter-spacing: 0;
 }
@@ -181,7 +179,7 @@ h1 {
   color: #12295f;
   font-size: clamp(3rem, 7.2vw, 6.6rem);
   line-height: 0.98;
-  text-shadow: 4px 4px 0 #fff7d6;
+  text-shadow: 4px 4px 0 #e8f0d8;
 }
 
 h1 span {
@@ -212,7 +210,7 @@ h1 span {
 .hero-meta span {
   padding: 0.58rem 0.78rem;
   border: 3px solid #0b1941;
-  background: #fff7d6;
+  background: #fffdf6;
   color: #12295f;
   font-weight: 900;
   box-shadow: 4px 4px 0 rgba(16, 34, 79, 0.28);
@@ -304,7 +302,7 @@ h1 span {
   margin-bottom: 1.35rem;
   padding: 1rem;
   border: 4px solid #0b1941;
-  background: #fff2ba;
+  background: #fffdf6;
   box-shadow: 6px 6px 0 rgba(16, 34, 79, 0.28);
 }
 
@@ -396,14 +394,14 @@ h1 span {
   margin: 1.35rem 0 0;
   padding: clamp(0.65rem, 2vw, 1rem);
   border: 4px solid #0b1941;
-  background: #fff2ba;
+  background: #fffdf6;
   box-shadow: 6px 6px 0 rgba(16, 34, 79, 0.28);
 }
 
 .research-figure img {
   width: 100%;
   border: 3px solid #0b1941;
-  background: #fffaf0;
+  background: #fff;
   image-rendering: auto;
 }
 
@@ -424,7 +422,7 @@ h1 span {
 .vision-copy {
   padding: 1.2rem;
   border: 4px solid #0b1941;
-  background: #fff2ba;
+  background: #fffdf6;
   box-shadow: 6px 6px 0 rgba(16, 34, 79, 0.28);
 }
 
