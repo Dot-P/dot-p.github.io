@@ -7,6 +7,7 @@ Static portfolio site for GitHub Pages.
 - `index.html`
 - `styles.css`
 - `script.js`
+- `assets/hero-active-vision.png`
 
 ## Publish
 
