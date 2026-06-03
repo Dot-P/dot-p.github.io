@@ -1,19 +1,19 @@
 :root {
-  --field: #fbfaf2;
-  --field-dark: #e7ead8;
-  --window: #16438f;
-  --window-2: #102b69;
-  --ink: #fff8df;
+  --field: #fbfdff;
+  --field-dark: #e9f2ff;
+  --window: #15468f;
+  --window-2: #0f2e68;
+  --ink: #f8fbff;
   --paper-ink: #18243f;
   --muted: #e4ecff;
-  --line: #fff8df;
-  --gold: #ffd45e;
-  --mint: #67bd61;
-  --sky: #86c9ef;
-  --coral: #e86f4d;
-  --stone: #d2cfaa;
-  --stone-dark: #88886e;
-  --pixel-shadow: 6px 6px 0 rgba(16, 34, 79, 0.28);
+  --line: #f8fbff;
+  --gold: #7bbcff;
+  --mint: #8bd6ff;
+  --sky: #dceeff;
+  --coral: #2f72d9;
+  --stone: #eaf4ff;
+  --stone-dark: #b8cdea;
+  --pixel-shadow: 6px 6px 0 rgba(21, 70, 143, 0.18);
 }
 
 * {
@@ -31,11 +31,11 @@ body {
   color: var(--paper-ink);
   background-color: var(--field);
   background-image:
-    linear-gradient(90deg, rgba(22, 67, 143, 0.04) 2px, transparent 2px),
-    linear-gradient(rgba(22, 67, 143, 0.04) 2px, transparent 2px),
-    radial-gradient(circle at 15% 10%, rgba(255, 212, 94, 0.28), transparent 18rem),
-    radial-gradient(circle at 86% 16%, rgba(103, 189, 97, 0.2), transparent 22rem),
-    linear-gradient(180deg, #fffdf6 0%, #fbfaf2 48%, #f2f6e9 100%);
+    linear-gradient(90deg, rgba(21, 70, 143, 0.045) 2px, transparent 2px),
+    linear-gradient(rgba(21, 70, 143, 0.045) 2px, transparent 2px),
+    radial-gradient(circle at 16% 10%, rgba(123, 188, 255, 0.24), transparent 18rem),
+    radial-gradient(circle at 84% 14%, rgba(139, 214, 255, 0.18), transparent 22rem),
+    linear-gradient(180deg, #ffffff 0%, #fbfdff 48%, #eef6ff 100%);
   background-position: 0 0, 0 0, 0 0, 0 0, 0 0;
   background-size: 28px 28px, 28px 28px, auto, auto, auto;
   font-family: "MS Gothic", "Yu Gothic UI", "Noto Sans JP", monospace;
@@ -144,13 +144,13 @@ img {
   aspect-ratio: 1;
   z-index: -1;
   background:
-    linear-gradient(90deg, rgba(78, 75, 58, 0.28) 4px, transparent 4px),
-    linear-gradient(rgba(78, 75, 58, 0.28) 4px, transparent 4px),
-    linear-gradient(45deg, rgba(255, 247, 214, 0.24) 25%, transparent 25%),
+    linear-gradient(90deg, rgba(21, 70, 143, 0.13) 4px, transparent 4px),
+    linear-gradient(rgba(21, 70, 143, 0.13) 4px, transparent 4px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(220, 238, 255, 0.9)),
     var(--stone);
   background-size: 28px 28px;
   border: 4px solid #0b1941;
-  box-shadow: var(--pixel-shadow), inset 0 0 0 4px rgba(255, 247, 214, 0.28);
+  box-shadow: var(--pixel-shadow), inset 0 0 0 4px rgba(255, 255, 255, 0.64);
 }
 
 .hero-content {
@@ -179,12 +179,12 @@ h1 {
   color: #12295f;
   font-size: clamp(3rem, 7.2vw, 6.6rem);
   line-height: 0.98;
-  text-shadow: 4px 4px 0 #e8f0d8;
+  text-shadow: 4px 4px 0 #e3f1ff;
 }
 
 h1 span {
   display: block;
-  color: #c54535;
+  color: var(--coral);
 }
 
 .lead {
@@ -225,16 +225,7 @@ h1 span {
 }
 
 .robot-track {
-  position: absolute;
-  width: min(88vw, 28rem);
-  aspect-ratio: 1;
-  border: 4px dashed #0b1941;
-  background:
-    linear-gradient(90deg, rgba(78, 75, 58, 0.24) 4px, transparent 4px),
-    linear-gradient(rgba(78, 75, 58, 0.24) 4px, transparent 4px),
-    rgba(178, 177, 141, 0.72);
-  background-size: 32px 32px;
-  animation: orbitSpin 18s steps(24) infinite;
+  display: none;
 }
 
 .robot-showcase {
@@ -455,7 +446,7 @@ h1 span {
 }
 
 .award-card {
-  background: #7a3271;
+  background: #1d5fa8;
 }
 
 .award-card span {
@@ -526,12 +517,6 @@ h1 span {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-@keyframes orbitSpin {
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 @keyframes robotFloat {
