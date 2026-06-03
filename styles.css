@@ -136,23 +136,6 @@ img {
   padding: clamp(4rem, 8vw, 7rem) 0 1.2rem;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 11% -4% auto auto;
-  width: min(48vw, 34rem);
-  aspect-ratio: 1;
-  z-index: -1;
-  background:
-    linear-gradient(90deg, rgba(21, 70, 143, 0.13) 4px, transparent 4px),
-    linear-gradient(rgba(21, 70, 143, 0.13) 4px, transparent 4px),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(220, 238, 255, 0.9)),
-    var(--stone);
-  background-size: 28px 28px;
-  border: 4px solid #0b1941;
-  box-shadow: var(--pixel-shadow), inset 0 0 0 4px rgba(255, 255, 255, 0.64);
-}
-
 .hero-content {
   grid-area: copy;
 }
@@ -228,6 +211,38 @@ h1 span {
   display: grid;
   place-items: center;
   min-height: 430px;
+}
+
+.mascot-stage::before {
+  content: "";
+  position: absolute;
+  width: min(74vw, 25rem);
+  aspect-ratio: 1.08;
+  border: 4px solid #0b1941;
+  border-radius: 999px;
+  background:
+    linear-gradient(90deg, rgba(21, 70, 143, 0.12) 4px, transparent 4px),
+    linear-gradient(rgba(21, 70, 143, 0.12) 4px, transparent 4px),
+    linear-gradient(180deg, #ffffff 0%, #e8f4ff 100%);
+  background-size: 24px 24px;
+  box-shadow: var(--pixel-shadow), inset 0 0 0 8px rgba(123, 188, 255, 0.24);
+  z-index: 0;
+}
+
+.mascot-stage::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #7bbcff;
+  box-shadow:
+    -9rem -7rem 0 #ffd45e,
+    8rem -6rem 0 #7bbcff,
+    -10rem 5.5rem 0 #15468f,
+    9rem 6.5rem 0 #ffd45e,
+    -4rem 8rem 0 #7bbcff;
+  z-index: 1;
+  animation: robotFloat 5s steps(4) infinite;
 }
 
 .robot-track {
