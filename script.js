@@ -1,5 +1,7 @@
 const canvas = document.querySelector(".vision-field");
 const ctx = canvas.getContext("2d");
+const rollingRobot = document.querySelector(".rolling-robot");
+const heroRobot = document.querySelector(".robot-showcase");
 const navLinks = [...document.querySelectorAll(".site-nav a")];
 const sections = navLinks
   .map((link) => document.querySelector(link.getAttribute("href")))
@@ -9,6 +11,7 @@ let width = 0;
 let height = 0;
 let particles = [];
 let pointer = { x: 0.5, y: 0.5 };
+let scrollTicking = false;
 
 function resizeCanvas() {
   const ratio = Math.min(window.devicePixelRatio || 1, 2);
@@ -98,7 +101,35 @@ window.addEventListener("mousemove", (event) => {
   };
 });
 
+function updateRobotMotion() {
+  const maxScroll = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+  const progress = window.scrollY / maxScroll;
+  const rotation = progress * 1440;
+  const bob = Math.sin(progress * Math.PI * 8) * 8;
+
+  if (rollingRobot) {
+    rollingRobot.style.setProperty("--rolling-opacity", window.scrollY > 90 ? "1" : "0");
+    rollingRobot.style.setProperty("--rolling-rotate", `${rotation}deg`);
+    rollingRobot.style.setProperty("--rolling-x", `${Math.sin(progress * Math.PI * 3) * -18}px`);
+    rollingRobot.style.setProperty("--rolling-y", `${bob}px`);
+  }
+
+  if (heroRobot) {
+    heroRobot.style.setProperty("--hero-robot-rotate", `${-5 + progress * 20}deg`);
+    heroRobot.style.setProperty("--hero-robot-y", `${Math.sin(progress * Math.PI * 4) * 10}px`);
+  }
+
+  scrollTicking = false;
+}
+
+window.addEventListener("scroll", () => {
+  if (scrollTicking) return;
+  scrollTicking = true;
+  requestAnimationFrame(updateRobotMotion);
+});
+
 window.addEventListener("resize", resizeCanvas);
 
 resizeCanvas();
+updateRobotMotion();
 drawField();

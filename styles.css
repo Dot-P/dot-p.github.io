@@ -196,6 +196,50 @@ h1 span {
   min-height: 430px;
 }
 
+.robot-track {
+  position: absolute;
+  width: min(88vw, 28rem);
+  aspect-ratio: 1;
+  border: 2px dashed rgba(44, 199, 179, 0.26);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.12) 64%, transparent 65%),
+    conic-gradient(from 120deg, rgba(255, 217, 106, 0.34), rgba(123, 188, 255, 0.22), rgba(255, 138, 122, 0.26), rgba(255, 217, 106, 0.34));
+  animation: orbitSpin 18s linear infinite;
+}
+
+.robot-showcase {
+  position: relative;
+  width: min(74vw, 22rem);
+  filter: drop-shadow(0 24px 34px rgba(62, 80, 100, 0.2));
+  transform: translateY(var(--hero-robot-y, 0)) rotate(var(--hero-robot-rotate, -4deg));
+  transition: transform 120ms linear;
+}
+
+.robot-showcase img {
+  width: 100%;
+}
+
+.rolling-robot {
+  position: fixed;
+  right: clamp(0.7rem, 3vw, 2rem);
+  bottom: clamp(0.7rem, 3vw, 2rem);
+  z-index: 18;
+  width: clamp(5.2rem, 10vw, 8.5rem);
+  pointer-events: none;
+  opacity: var(--rolling-opacity, 0);
+  transform:
+    translate3d(var(--rolling-x, 0), var(--rolling-y, 0), 0)
+    rotate(var(--rolling-rotate, 0deg));
+  transform-origin: 50% 62%;
+  filter: drop-shadow(0 16px 18px rgba(62, 80, 100, 0.2));
+  transition: opacity 180ms ease;
+}
+
+.rolling-robot img {
+  width: 100%;
+}
+
 .motion-orbit {
   position: absolute;
   border: 2px dashed rgba(44, 199, 179, 0.28);
