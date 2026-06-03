@@ -291,7 +291,9 @@ h1 span {
 .metric,
 .profile-card,
 .source-panel,
-.step {
+.step,
+.project-card,
+.award-card {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--panel);
@@ -375,30 +377,58 @@ h1 span {
   font-weight: 900;
 }
 
-.timeline {
-  list-style: none;
+.project-grid {
   display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  grid-column: span 2;
+  min-height: 15rem;
+  padding: clamp(1.15rem, 3vw, 1.5rem);
+  background:
+    linear-gradient(145deg, rgba(78, 231, 198, 0.08), rgba(255, 109, 97, 0.05)),
+    var(--panel);
+}
+
+.project-card:nth-child(1),
+.project-card:nth-child(2) {
+  grid-column: span 3;
+}
+
+.project-card h3,
+.award-card h3 {
+  margin: 0 0 0.8rem;
+  font-size: clamp(1.2rem, 2.4vw, 1.65rem);
+  line-height: 1.18;
+}
+
+.project-card p,
+.award-card p {
   margin: 0;
-  padding: 0;
-  border-top: 1px solid var(--line);
+  color: #c9dbd6;
+  line-height: 1.75;
 }
 
-.timeline li {
+.award-grid {
   display: grid;
-  grid-template-columns: 8rem minmax(0, 1fr);
-  gap: 1.4rem;
-  padding: 1.05rem 0;
-  border-bottom: 1px solid var(--line);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
 }
 
-.timeline time {
+.award-card {
+  padding: clamp(1.15rem, 3vw, 1.6rem);
+  background:
+    linear-gradient(135deg, rgba(244, 198, 93, 0.12), rgba(78, 231, 198, 0.06)),
+    var(--panel-strong);
+}
+
+.award-card span {
+  display: inline-flex;
+  margin-bottom: 0.85rem;
   color: var(--gold);
   font-weight: 900;
-}
-
-.timeline span {
-  color: #d9e8e4;
-  line-height: 1.65;
 }
 
 .profile {
@@ -509,8 +539,20 @@ h1 span {
   .hero-dock,
   .research-layout,
   .vision-section,
-  .profile {
+  .profile,
+  .award-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card,
+  .project-card:nth-child(1),
+  .project-card:nth-child(2) {
+    grid-column: auto;
+    min-height: auto;
   }
 
   .profile-card dl {
@@ -540,8 +582,7 @@ h1 span {
   }
 
   .step,
-  .metric,
-  .timeline li {
+  .metric {
     grid-template-columns: 1fr;
     gap: 0.35rem;
   }
