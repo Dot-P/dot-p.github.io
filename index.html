@@ -15,7 +15,6 @@
     />
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#071216" />
-    <link rel="preload" as="image" href="./assets/hero-active-vision.png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -37,23 +36,37 @@
 
     <main id="top">
       <section class="hero">
-        <div class="hero-media" aria-hidden="true">
-          <img src="./assets/hero-active-vision.png" alt="" />
-          <div class="hero-scan scan-a"></div>
-          <div class="hero-scan scan-b"></div>
-        </div>
-
         <div class="hero-content reveal">
           <p class="eyebrow">Active Vision / Physical AI / Robot-controlled viewpoints</p>
           <h1>荒明 尚輝 <span>Naoki Araake</span></h1>
           <p class="lead">
-            Passive perception recognizes what is given. Active perception seeks the information needed for action.
+            ロボットが行動に必要な情報を自ら取りにいく知能を研究しています。
           </p>
           <div class="hero-meta" aria-label="Profile summary">
             <span>M1 @ Kyoto University</span>
             <span>Taniguchi Laboratory</span>
             <span>From Gunma</span>
           </div>
+        </div>
+
+        <div class="mascot-stage reveal" aria-label="Cute wheeled robot illustration">
+          <div class="motion-orbit orbit-a"></div>
+          <div class="motion-orbit orbit-b"></div>
+          <div class="robot-mascot">
+            <div class="robot-antenna"></div>
+            <div class="robot-head">
+              <span class="robot-eye eye-left"></span>
+              <span class="robot-eye eye-right"></span>
+              <span class="robot-smile"></span>
+            </div>
+            <div class="robot-body">
+              <span class="camera-dot"></span>
+              <span class="robot-heart"></span>
+            </div>
+            <div class="robot-wheel wheel-left"></div>
+            <div class="robot-wheel wheel-right"></div>
+          </div>
+          <div class="robot-shadow"></div>
         </div>
 
         <div class="hero-dock reveal" aria-label="Research snapshot">
@@ -103,12 +116,21 @@
             </div>
           </div>
 
-          <article class="focus-card reveal">
+          <article class="focus-card figure-card reveal">
             <span class="card-kicker">Previous Research</span>
             <h3>3D scene affordance segmentation using point clouds</h3>
             <p>
               3D 点群からシーン内のアフォーダンスを読み取り、環境の中で「何ができるか」を認識する研究に取り組みました。
             </p>
+            <figure class="research-figure">
+              <img
+                src="./assets/previous-research-affordance.png"
+                alt="Previous research result figure comparing GT, OpenScene, and Ours for affordance segmentation using point clouds."
+              />
+              <figcaption>
+                Result snapshot: affordance segmentation examples for interaction labels such as key_press and hook_pull.
+              </figcaption>
+            </figure>
           </article>
 
           <article class="focus-card reveal">
