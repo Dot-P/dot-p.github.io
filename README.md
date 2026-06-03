@@ -8,7 +8,7 @@ Static portfolio site for GitHub Pages.
 - `styles.css`
 - `script.js`
 - `assets/previous-research-affordance.png`
-- `assets/robot-sidekick.png`
+- `assets/robot-pixel.png`
 
 ## Publish
 
