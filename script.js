@@ -1,7 +1,5 @@
 const canvas = document.querySelector(".vision-field");
 const ctx = canvas.getContext("2d");
-const rollingRobot = document.querySelector(".rolling-robot");
-const heroRobot = document.querySelector(".robot-showcase");
 const navLinks = [...document.querySelectorAll(".site-nav a")];
 const sections = navLinks
   .map((link) => document.querySelector(link.getAttribute("href")))
@@ -11,7 +9,6 @@ let width = 0;
 let height = 0;
 let particles = [];
 let pointer = { x: 0.5, y: 0.5 };
-let scrollTicking = false;
 
 function resizeCanvas() {
   const ratio = Math.min(window.devicePixelRatio || 1, 2);
@@ -101,49 +98,7 @@ window.addEventListener("mousemove", (event) => {
   };
 });
 
-function updateRobotMotion() {
-  const maxScroll = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
-  const progress = window.scrollY / maxScroll;
-  const angle = progress * Math.PI * 2.4 - Math.PI / 2;
-  const depth = Math.sin(angle);
-  const horizontal = Math.cos(angle);
-  const heroX = horizontal * Math.min(width * 0.15, 88);
-  const heroY = depth * Math.min(height * 0.08, 46);
-  const heroScale = 0.82 + ((depth + 1) / 2) * 0.34;
-  const heroYaw = horizontal * -22;
-  const orbitX = horizontal * Math.min(width * 0.32, 260);
-  const orbitY = depth * Math.min(height * 0.18, 130);
-  const orbitScale = 0.58 + ((depth + 1) / 2) * 0.42;
-  const orbitYaw = horizontal * -28;
-
-  if (rollingRobot) {
-    rollingRobot.style.setProperty("--rolling-opacity", window.scrollY > 90 ? "1" : "0");
-    rollingRobot.style.setProperty("--rolling-orbit-x", `${orbitX}px`);
-    rollingRobot.style.setProperty("--rolling-orbit-y", `${orbitY}px`);
-    rollingRobot.style.setProperty("--rolling-orbit-scale", orbitScale.toFixed(3));
-    rollingRobot.style.setProperty("--rolling-orbit-yaw", `${orbitYaw.toFixed(2)}deg`);
-    rollingRobot.style.zIndex = depth > 0 ? "18" : "3";
-  }
-
-  if (heroRobot) {
-    heroRobot.style.setProperty("--hero-orbit-x", `${heroX}px`);
-    heroRobot.style.setProperty("--hero-orbit-y", `${heroY}px`);
-    heroRobot.style.setProperty("--hero-orbit-scale", heroScale.toFixed(3));
-    heroRobot.style.setProperty("--hero-orbit-yaw", `${heroYaw.toFixed(2)}deg`);
-    heroRobot.style.setProperty("--hero-orbit-z", depth > 0 ? "2" : "0");
-  }
-
-  scrollTicking = false;
-}
-
-window.addEventListener("scroll", () => {
-  if (scrollTicking) return;
-  scrollTicking = true;
-  requestAnimationFrame(updateRobotMotion);
-});
-
 window.addEventListener("resize", resizeCanvas);
 
 resizeCanvas();
-updateRobotMotion();
 drawField();
