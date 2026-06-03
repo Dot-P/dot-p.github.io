@@ -355,6 +355,24 @@ h1 span {
   grid-column: 1 / -1;
 }
 
+.vision-art-card {
+  margin: 0;
+  padding: clamp(0.8rem, 2vw, 1.1rem);
+  border: 4px solid #0b1941;
+  outline: 4px solid var(--line);
+  background: #fffdf6;
+  box-shadow: var(--pixel-shadow);
+}
+
+.vision-art-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 3px solid #0b1941;
+  background: #f8fbff;
+  image-rendering: auto;
+}
+
 .focus-card h3,
 .project-card h3,
 .award-card h3,
