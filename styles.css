@@ -366,8 +366,8 @@ h1 span {
 
 .vision-art-card img {
   width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
+  aspect-ratio: 1624 / 936;
+  object-fit: contain;
   border: 3px solid #0b1941;
   background: #f8fbff;
   image-rendering: auto;
