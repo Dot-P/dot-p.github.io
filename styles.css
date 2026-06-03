@@ -194,6 +194,8 @@ h1 span {
   display: grid;
   place-items: center;
   min-height: 430px;
+  perspective: 900px;
+  overflow: visible;
 }
 
 .robot-track {
@@ -209,11 +211,16 @@ h1 span {
 }
 
 .robot-showcase {
-  position: relative;
+  position: absolute;
   width: min(74vw, 22rem);
   filter: drop-shadow(0 24px 34px rgba(62, 80, 100, 0.2));
-  transform: translateY(var(--hero-robot-y, 0)) rotate(var(--hero-robot-rotate, -4deg));
+  transform:
+    translate3d(var(--hero-orbit-x, 0), var(--hero-orbit-y, 0), 0)
+    scale(var(--hero-orbit-scale, 1))
+    rotateY(var(--hero-orbit-yaw, 0deg));
+  transform-style: preserve-3d;
   transition: transform 120ms linear;
+  z-index: var(--hero-orbit-z, 2);
 }
 
 .robot-showcase img {
@@ -222,198 +229,25 @@ h1 span {
 
 .rolling-robot {
   position: fixed;
-  right: clamp(0.7rem, 3vw, 2rem);
-  bottom: clamp(0.7rem, 3vw, 2rem);
+  left: 50%;
+  top: 50%;
   z-index: 18;
-  width: clamp(5.2rem, 10vw, 8.5rem);
+  width: clamp(4.6rem, 9vw, 7.4rem);
   pointer-events: none;
   opacity: var(--rolling-opacity, 0);
   transform:
-    translate3d(var(--rolling-x, 0), var(--rolling-y, 0), 0)
-    rotate(var(--rolling-rotate, 0deg));
-  transform-origin: 50% 62%;
+    translate(-50%, -50%)
+    translate3d(var(--rolling-orbit-x, 0), var(--rolling-orbit-y, 0), 0)
+    scale(var(--rolling-orbit-scale, 1))
+    rotateY(var(--rolling-orbit-yaw, 0deg));
+  transform-origin: 50% 60%;
+  transform-style: preserve-3d;
   filter: drop-shadow(0 16px 18px rgba(62, 80, 100, 0.2));
   transition: opacity 180ms ease;
 }
 
 .rolling-robot img {
   width: 100%;
-}
-
-.motion-orbit {
-  position: absolute;
-  border: 2px dashed rgba(44, 199, 179, 0.28);
-  border-radius: 50%;
-  animation: orbitSpin 14s linear infinite;
-}
-
-.orbit-a {
-  width: min(82vw, 25rem);
-  aspect-ratio: 1;
-}
-
-.orbit-b {
-  width: min(68vw, 19rem);
-  aspect-ratio: 1;
-  border-color: rgba(255, 138, 122, 0.28);
-  animation-direction: reverse;
-  animation-duration: 10s;
-}
-
-.robot-mascot {
-  position: relative;
-  width: min(72vw, 18rem);
-  height: 21rem;
-  animation: robotWiggle 3.4s ease-in-out infinite;
-}
-
-.robot-antenna {
-  position: absolute;
-  left: 50%;
-  top: 0.15rem;
-  width: 0.3rem;
-  height: 2.8rem;
-  transform: translateX(-50%);
-  border-radius: 999px;
-  background: #94d7ff;
-}
-
-.robot-antenna::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: -0.42rem;
-  width: 0.95rem;
-  height: 0.95rem;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  background: var(--lemon);
-  box-shadow: 0 0 0 0.45rem rgba(255, 217, 106, 0.26);
-}
-
-.robot-head,
-.robot-body {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 3px solid #203647;
-  background: var(--surface);
-  box-shadow: var(--shadow);
-}
-
-.robot-head {
-  top: 2rem;
-  width: 12.8rem;
-  height: 9.4rem;
-  border-radius: 46% 46% 38% 38%;
-}
-
-.robot-body {
-  top: 10.2rem;
-  width: 10.7rem;
-  height: 8.3rem;
-  border-radius: 2.4rem 2.4rem 3.1rem 3.1rem;
-  background: linear-gradient(180deg, #ffffff, #eafaf6);
-}
-
-.robot-eye {
-  position: absolute;
-  top: 3.3rem;
-  width: 1.55rem;
-  height: 1.55rem;
-  border-radius: 50%;
-  background: #203647;
-  animation: blink 5s ease-in-out infinite;
-}
-
-.eye-left {
-  left: 3.2rem;
-}
-
-.eye-right {
-  right: 3.2rem;
-}
-
-.robot-smile {
-  position: absolute;
-  left: 50%;
-  top: 5.75rem;
-  width: 3.1rem;
-  height: 1.55rem;
-  transform: translateX(-50%);
-  border-bottom: 0.28rem solid #203647;
-  border-radius: 0 0 999px 999px;
-}
-
-.camera-dot {
-  position: absolute;
-  left: 50%;
-  top: 2rem;
-  width: 2.1rem;
-  height: 2.1rem;
-  transform: translateX(-50%);
-  border: 0.35rem solid #203647;
-  border-radius: 50%;
-  background: var(--sky);
-}
-
-.robot-heart {
-  position: absolute;
-  left: 50%;
-  top: 5.4rem;
-  width: 1.25rem;
-  height: 1.25rem;
-  transform: translateX(-50%) rotate(45deg);
-  background: var(--coral);
-}
-
-.robot-heart::before,
-.robot-heart::after {
-  content: "";
-  position: absolute;
-  width: 1.25rem;
-  height: 1.25rem;
-  border-radius: 50%;
-  background: var(--coral);
-}
-
-.robot-heart::before {
-  left: -0.65rem;
-}
-
-.robot-heart::after {
-  top: -0.65rem;
-}
-
-.robot-wheel {
-  position: absolute;
-  bottom: 0.7rem;
-  width: 5.1rem;
-  height: 5.1rem;
-  border: 0.55rem solid #203647;
-  border-radius: 50%;
-  background:
-    conic-gradient(from 0deg, #203647 0 12deg, transparent 12deg 45deg, #203647 45deg 57deg, transparent 57deg 90deg),
-    #ffffff;
-  animation: wheelSpin 1.2s linear infinite;
-}
-
-.wheel-left {
-  left: 1.3rem;
-}
-
-.wheel-right {
-  right: 1.3rem;
-}
-
-.robot-shadow {
-  position: absolute;
-  bottom: 2.15rem;
-  width: 15rem;
-  height: 2.3rem;
-  border-radius: 50%;
-  background: rgba(62, 80, 100, 0.13);
-  filter: blur(8px);
 }
 
 .hero-dock {
@@ -683,36 +517,9 @@ h1 span {
   transform: translateY(0);
 }
 
-@keyframes wheelSpin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes orbitSpin {
   to {
     transform: rotate(360deg);
-  }
-}
-
-@keyframes robotWiggle {
-  0%,
-  100% {
-    transform: translateY(0) rotate(-2deg);
-  }
-  50% {
-    transform: translateY(-12px) rotate(2deg);
-  }
-}
-
-@keyframes blink {
-  0%,
-  92%,
-  100% {
-    transform: scaleY(1);
-  }
-  95% {
-    transform: scaleY(0.12);
   }
 }
 
@@ -770,10 +577,6 @@ h1 span {
 
   .mascot-stage {
     min-height: 350px;
-  }
-
-  .robot-mascot {
-    transform: scale(0.88);
   }
 
   .metric,
