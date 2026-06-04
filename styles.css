@@ -333,8 +333,7 @@ h1 span {
 
 .research-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
-  align-items: stretch;
+  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
@@ -366,18 +365,16 @@ h1 span {
 .vision-art-card {
   display: grid;
   place-items: center;
-  margin: 0;
+  margin: 1.2rem 0 0;
   padding: clamp(0.8rem, 2vw, 1.1rem);
   border: 4px solid #0b1941;
   outline: 4px solid var(--line);
   background: #fffdf6;
-  box-shadow: var(--pixel-shadow);
-  align-self: stretch;
+  box-shadow: 6px 6px 0 rgba(16, 34, 79, 0.24);
 }
 
 .vision-art-card img {
   width: 100%;
-  height: 100%;
   aspect-ratio: 1624 / 936;
   object-fit: contain;
   border: 3px solid #0b1941;
