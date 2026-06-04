@@ -347,6 +347,7 @@ h1 span {
 }
 
 .research-copy-stack .section-heading {
+  max-width: 100%;
   margin-bottom: 0;
 }
 
