@@ -27,7 +27,6 @@
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="#research">Research</a>
-        <a href="#vision">Vision</a>
         <a href="#projects">Projects</a>
         <a href="#awards">Achievements</a>
         <a href="#profile">Profile</a>
@@ -73,20 +72,22 @@
       </section>
 
       <section id="research" class="section research-section">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Research Focus</p>
-          <h2>見えている世界を認識するロボットから、<br />必要な世界を見にいくロボットへ</h2>
-        </div>
-
         <div class="research-layout">
-          <article class="focus-card main-card reveal">
-            <span class="card-kicker">Current Research</span>
-            <h3>Active Vision for manipulation</h3>
-            <p>
-              ロボットが人間の世界で行動するには、与えられた視点を認識するだけでは不十分です。
-              見えない部分、隠れている部分、操作に必要な部分を自ら確かめにいくことで、より安全で確実に行動できるロボットを目指しています。
-            </p>
-          </article>
+          <div class="research-copy-stack">
+            <div class="section-heading reveal">
+              <p class="eyebrow">Research Focus</p>
+              <h2>見えている世界を認識するロボットから、<br />必要な世界を見にいくロボットへ</h2>
+            </div>
+
+            <article class="focus-card main-card reveal">
+              <span class="card-kicker">Current Research</span>
+              <h3>Active Vision for manipulation</h3>
+              <p>
+                ロボットが人間の世界で行動するには、与えられた視点を認識するだけでは不十分です。
+                見えない部分、隠れている部分、操作に必要な部分を自ら確かめにいくことで、より安全で確実に行動できるロボットを目指しています。
+              </p>
+            </article>
+          </div>
 
           <figure class="vision-art-card reveal">
             <img
@@ -94,6 +95,15 @@
               alt="Pixel-art Active Vision diagram showing a robot moving its camera to find kitchen tools and fruit."
             />
           </figure>
+
+          <article class="focus-card question-card reveal">
+            <span class="card-kicker">Core Question</span>
+            <h3>What should the robot look at next?</h3>
+            <p>
+              与えられた画像を認識するだけでなく、次にどの視点へ動けば行動に必要な情報が得られるのかを考える。
+              そこに Active Vision の面白さがあります。
+            </p>
+          </article>
 
           <article class="focus-card figure-card reveal">
             <span class="card-kicker">Previous Research</span>
@@ -112,73 +122,62 @@
               </figcaption>
             </figure>
           </article>
-
-          <article class="focus-card reveal">
-            <span class="card-kicker">Core Question</span>
-            <h3>What should the robot look at next?</h3>
-            <p>
-              与えられた画像を認識するだけでなく、次にどの視点へ動けば行動に必要な情報が得られるのかを考える。
-              そこに Active Vision の面白さがあります。
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="vision" class="section vision-section">
-        <div class="vision-copy reveal">
-          <p class="eyebrow">Vision</p>
-          <h2>Daily automation, extended into the physical world.</h2>
-          <p>
-            プログラミングは、面倒な作業を自動化できる手段として魅力的でした。
-            Physical AI は、その自動化を物理世界へ拡張するための技術だと考えています。
-          </p>
-        </div>
-        <div class="vision-steps">
-          <div class="step reveal"><span>Reduce</span><p>日常生活にある不要な作業を減らす。</p></div>
-          <div class="step reveal"><span>Automate</span><p>ソフトウェアで反復作業を軽くする。</p></div>
-          <div class="step reveal"><span>Act</span><p>ロボットが必要な情報を自ら取りにいく。</p></div>
         </div>
       </section>
 
       <section id="projects" class="section projects-section">
         <div class="section-heading reveal">
           <p class="eyebrow">Projects & Experience</p>
-          <h2>Building systems across software and physical spaces.</h2>
+          <h2>学んだ技術を社会に役立てるために</h2>
         </div>
         <div class="project-grid">
+          <article class="project-card reveal">
+            <span class="card-kicker">National Project</span>
+            <h3>ムーンショット計画への参画</h3>
+            <p>
+              2050年までに、AIとロボットの共進化により自ら学習・行動し人と共生するロボットを実現する国家プロジェクトに参画しています。
+            </p>
+          </article>
+          <article class="project-card reveal">
+            <span class="card-kicker">Physical AI Community</span>
+            <h3>KUPAC / 京都大学 Physical AI Community</h3>
+            <p>
+              八木先生の技術指導のもと、人型ロボットを対象に、言語指示とモーションリターゲット技術を用いた人間らしい動作生成に取り組んでいます。
+            </p>
+          </article>
           <article class="project-card reveal">
             <span class="card-kicker">Campus Project</span>
             <h3>葛飾キャンパスロッカープロジェクト</h3>
             <p>
-              キャンパス内の身近な不便を起点に、利用者の行動から運用まで含めて仕組みを設計するプロジェクトに取り組みました。
+              Excel管理だったロッカー予約を、大学メール認証と自動割り当てを備えた予約システムに置き換え、人手による本人確認や割り振り作業を減らしました。
             </p>
           </article>
           <article class="project-card reveal">
-            <span class="card-kicker">Internship</span>
+            <span class="card-kicker">Long-term Internship</span>
             <h3>Nebraska / 無人書店</h3>
             <p>
-              物理空間で動くサービスに関わり、ソフトウェアが現実の体験やオペレーションに接続する面白さを学びました。
+              LLMとRAGが注目され始めた時期に、本のレコメンデーションシステムを開発。会話を通して曖昧な欲しい本のイメージを具体化しました。
             </p>
           </article>
           <article class="project-card reveal">
-            <span class="card-kicker">Internship</span>
-            <h3>Infodeliver / MCP Server</h3>
+            <span class="card-kicker">Long-term Internship</span>
+            <h3>Infodeliver / 管理者エージェント</h3>
             <p>
-              MCPサーバー構築に取り組み、AIエージェントと外部システムをつなぐインターフェース設計を経験しました。
+              Jiraなどのタスク情報を読み取り、Slackで進捗確認や期限超過タスクへのフィードバック、日次レポート生成を行う社内業務改善エージェントを開発しました。
             </p>
           </article>
           <article class="project-card reveal">
-            <span class="card-kicker">Internship</span>
+            <span class="card-kicker">Short-term Internship</span>
             <h3>Bandai Namco Holdings</h3>
             <p>
-              エンターテインメント領域の開発現場に触れ、ユーザー体験を支えるプロダクトづくりを学びました。
+              Goを用いたゲームバックエンド開発を経験。仕様書に沿って機能を実装し、エンターテインメント領域の開発プロセスに触れました。
             </p>
           </article>
           <article class="project-card reveal">
-            <span class="card-kicker">Internship</span>
-            <h3>CyberAgent</h3>
+            <span class="card-kicker">Short-term Internship</span>
+            <h3>CyberAgent / CYCOMPE</h3>
             <p>
-              実サービスに近い開発環境で、スピード感のある実装とチーム開発の進め方を経験しました。
+              バックエンド部門で、仕様変更に対応しながらGoでアプリケーションを設計・開発。テスト、設計、ドキュメント、品質を意識した実装に取り組みました。
             </p>
           </article>
         </div>
@@ -187,18 +186,28 @@
       <section id="awards" class="section awards-section">
         <div class="section-heading reveal">
           <p class="eyebrow">Achievements</p>
-          <h2>Recognition for research and presentation.</h2>
+          <h2>表彰実績、論文採択</h2>
         </div>
         <div class="award-grid">
           <article class="award-card reveal">
             <span>2026.03</span>
             <h3>東京理科大学 工学部 情報工学科 優秀学生賞</h3>
-            <p>学部時代の研究活動と成果に対する表彰。</p>
+            <p>学部時代の研究活動と成績に対する表彰。</p>
           </article>
           <article class="award-card reveal">
             <span>2026</span>
             <h3>MIRU2026<br />Oral Presentation</h3>
-            <p>Research paper selected for oral presentation at MIRU2026.</p>
+            <p>学部時代の研究がMIRU2026 Oral Presentationに選出。現在は国際会議への投稿にも挑戦中。</p>
+          </article>
+          <article class="award-card reveal">
+            <span>2023</span>
+            <h3>技育キャンプ GMOインターネット 企業賞</h3>
+            <p>開発・発表を通じた実装力と企画力への評価。</p>
+          </article>
+          <article class="award-card reveal">
+            <span>2023.11</span>
+            <h3>技育キャンプアドバンス ウイングアーク1st 企業賞</h3>
+            <p>プロダクトの実装力と社会課題への着眼に対する評価。</p>
           </article>
         </div>
       </section>
@@ -218,9 +227,13 @@
         </div>
 
         <aside class="source-panel reveal">
-          <h3>Affiliations & Sources</h3>
+          <h3>Affiliations & Related Links</h3>
           <a href="https://www.rs.tus.ac.jp/prmi/">Tokyo University of Science / Irie Lab</a>
           <a href="https://ses.ist.i.kyoto-u.ac.jp/members/">Kyoto University / Taniguchi Laboratory</a>
+          <a href="https://www.jst.go.jp/moonshot/program/goal3/index.html">Moonshot Goal 3 / JST</a>
+          <a href="https://www8.cao.go.jp/cstp/moonshot/sub3.html">Moonshot Goal 3 / Cabinet Office</a>
+          <a href="https://note.com/dotp_engineer">Dot-P note</a>
+          <a href="https://note.com/dotp_engineer/n/nf204e32c7bfb">CYCOMPE note</a>
         </aside>
       </section>
     </main>
