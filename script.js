@@ -4,8 +4,10 @@ const posterTrigger = document.querySelector(".poster-trigger");
 const posterClose = document.querySelector(".poster-close");
 
 if (posterDialog && typeof posterDialog.showModal === "function") {
-  posterTrigger.hidden = false;
-  posterTrigger.addEventListener("click", () => posterDialog.showModal());
+  posterTrigger.addEventListener("click", (event) => {
+    event.preventDefault();
+    posterDialog.showModal();
+  });
   posterClose.addEventListener("click", () => posterDialog.close());
   posterDialog.addEventListener("click", (event) => {
     if (event.target === posterDialog) posterDialog.close();

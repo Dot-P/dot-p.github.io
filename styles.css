@@ -511,12 +511,14 @@ h1 span {
   font-weight: 900;
 }
 
-.poster-trigger {
+.publication-item .poster-trigger {
+  display: inline-block;
   padding: 0.6rem 0.8rem;
   border: 2px solid #0b1941;
   background: var(--gold);
   color: #0b1941;
   box-shadow: 3px 3px 0 #07163c;
+  text-decoration: none;
 }
 
 .poster-dialog {
