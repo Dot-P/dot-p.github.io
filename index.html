@@ -15,7 +15,7 @@
     />
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#15468f" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=20261026" />
   </head>
   <body>
     <canvas class="vision-field" aria-hidden="true"></canvas>
@@ -66,7 +66,7 @@
           </article>
           <article>
             <span>Achievements</span>
-            <strong>TUS Excellent Student Award<br />MIRU2026 Oral Presentation</strong>
+            <strong>TUS Excellent Student Award<br />BMVC 2026 Paper Accepted</strong>
           </article>
         </div>
       </section>
@@ -102,6 +102,22 @@
               学部時代は、3D点群を用いてシーン内のアフォーダンスを認識する研究に取り組みました。
               物体単体ではなく、空間の中で「どこにどのような行為が可能か」を推定することに関心があります。
             </p>
+            <div class="research-publications" aria-label="研究発表と論文採択">
+              <div class="publication-item">
+                <span class="publication-label">MIRU 2026 · Oral Presentation</span>
+                <p>「物体パーツ集合のアライメントに基づく3Dアフォーダンスセグメンテーション」が口頭発表に採択されました。</p>
+                <div class="publication-actions">
+                  <button class="poster-trigger" type="button" aria-haspopup="dialog" aria-controls="poster-dialog" hidden>ポスターを見る ↗</button>
+                  <a href="./assets/miru-2026-poster.pdf" target="_blank" rel="noopener">ポスターPDFを開く ↗</a>
+                </div>
+              </div>
+              <div class="publication-item">
+                <span class="publication-label">BMVC 2026 · Paper Accepted</span>
+                <p>Part-Aware Prompt Adaptation for 3D Scene Affordance Segmentation</p>
+                <p class="publication-note">カメラレディ原稿のURLは、OpenReviewで公開され次第掲載予定です。現在準備中です。</p>
+                <a href="https://bmvc2026.bmva.org/programme/accepted_papers/#:~:text=Part-Aware%20Prompt%20Adaptation%20for%203D%20Scene%20Affordance%20Segmentation" target="_blank" rel="noopener">採択論文一覧（No. 555） ↗</a>
+              </div>
+            </div>
             <figure class="research-figure">
               <img
                 src="./assets/previous-research-affordance.png"
@@ -129,11 +145,19 @@
             </p>
           </article>
           <article class="project-card reveal">
+            <span class="card-kicker">Collaborative Research</span>
+            <h3>京都大学 × 三菱電機<br />共同研究</h3>
+            <p>
+              自身のActive Vision研究と並行して、京都大学と三菱電機の共同研究に参画し、暗黙知に関する研究に取り組んでいます。
+            </p>
+          </article>
+          <article class="project-card reveal">
             <span class="card-kicker">Physical AI Community</span>
             <h3>KUPAC / 京都大学 Physical AI Community</h3>
             <p>
-              八木先生の技術指導のもと、人型ロボットを対象に、言語指示とモーションリターゲット技術を用いた人間らしい動作生成に取り組んでいます。
+              Physical AIに関する勉強会やイベントに参加し、研究者や学生との交流を通じて知識を広げています。
             </p>
+            <a class="project-link" href="https://www.kupac.org/ja/" target="_blank" rel="noopener">KUPACについて ↗</a>
           </article>
           <article class="project-card reveal">
             <span class="card-kicker">Campus Project</span>
@@ -186,8 +210,8 @@
           </article>
           <article class="award-card reveal">
             <span>2026</span>
-            <h3>MIRU2026<br />Oral Presentation</h3>
-            <p>学部時代の研究がMIRU2026 Oral Presentationに選出。現在は国際会議への投稿にも挑戦中。</p>
+            <h3>BMVC 2026<br />Paper Accepted</h3>
+            <p>3Dシーンのアフォーダンスセグメンテーションに関する論文が、国際会議BMVC 2026に採択されました。</p>
           </article>
           <article class="award-card reveal">
             <span>2023</span>
@@ -232,6 +256,15 @@
       <span>Active Vision / Manipulation / Physical AI</span>
     </footer>
 
-    <script src="./script.js"></script>
+    <dialog id="poster-dialog" class="poster-dialog" aria-labelledby="poster-dialog-title">
+      <div class="poster-dialog-header">
+        <h2 id="poster-dialog-title">MIRU 2026 ポスター</h2>
+        <button type="button" class="poster-close" aria-label="ポスターを閉じる">×</button>
+      </div>
+      <p class="poster-dialog-note">画像をスクロールしてご覧ください。拡大して読む場合はPDFを開けます。</p>
+      <a class="poster-pdf-link" href="./assets/miru-2026-poster.pdf" target="_blank" rel="noopener">PDFを開く ↗</a>
+      <img src="./assets/miru-2026-poster-preview.png" alt="MIRU 2026ポスター：物体パーツ集合のアライメントに基づく3Dアフォーダンスセグメンテーション" loading="lazy" />
+    </dialog>
+    <script src="./script.js?v=20261026"></script>
   </body>
 </html>

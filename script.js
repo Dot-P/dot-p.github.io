@@ -1,4 +1,17 @@
 const canvas = document.querySelector(".vision-field");
+const posterDialog = document.querySelector("#poster-dialog");
+const posterTrigger = document.querySelector(".poster-trigger");
+const posterClose = document.querySelector(".poster-close");
+
+if (posterDialog && typeof posterDialog.showModal === "function") {
+  posterTrigger.hidden = false;
+  posterTrigger.addEventListener("click", () => posterDialog.showModal());
+  posterClose.addEventListener("click", () => posterDialog.close());
+  posterDialog.addEventListener("click", (event) => {
+    if (event.target === posterDialog) posterDialog.close();
+  });
+}
+
 const ctx = canvas.getContext("2d");
 const navLinks = [...document.querySelectorAll(".site-nav a")];
 const sections = navLinks

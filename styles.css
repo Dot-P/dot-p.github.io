@@ -455,6 +455,135 @@ h1 span {
   line-height: 1.6;
 }
 
+.research-publications {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-top: 1.4rem;
+}
+
+.publication-item {
+  min-width: 0;
+  padding: 1rem;
+  border: 2px solid #93c7ff;
+  background: #0f2e68;
+}
+
+.publication-label {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: var(--gold);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.publication-item .publication-note {
+  margin-top: 0.6rem;
+  font-size: 0.88rem;
+}
+
+.publication-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.8rem;
+}
+
+.publication-item a,
+.project-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: var(--gold);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.publication-actions a {
+  margin-top: 0;
+}
+
+.poster-trigger,
+.poster-close {
+  cursor: pointer;
+  font: inherit;
+  font-weight: 900;
+}
+
+.poster-trigger {
+  padding: 0.6rem 0.8rem;
+  border: 2px solid #0b1941;
+  background: var(--gold);
+  color: #0b1941;
+  box-shadow: 3px 3px 0 #07163c;
+}
+
+.poster-dialog {
+  width: min(900px, calc(100% - 1.5rem));
+  max-height: calc(100dvh - 2rem);
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border: 4px solid #0b1941;
+  background: #fffdf6;
+  color: #18243f;
+  box-shadow: 8px 8px 0 rgba(7, 22, 60, 0.35);
+}
+
+.poster-dialog::backdrop {
+  background: rgba(4, 15, 43, 0.8);
+}
+
+.poster-dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.poster-dialog-header h2 {
+  margin: 0;
+  font-size: clamp(1.1rem, 4vw, 1.5rem);
+}
+
+.poster-close {
+  flex: 0 0 auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid #0b1941;
+  background: #15468f;
+  color: white;
+  font-size: 1.6rem;
+}
+
+.poster-dialog-note {
+  margin: 0.8rem 0 0;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.poster-pdf-link {
+  display: inline-block;
+  margin: 0.7rem 0 1rem;
+  color: #15468f;
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.poster-dialog img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #0b1941;
+}
+
+.poster-trigger:focus-visible,
+.poster-close:focus-visible,
+.publication-item a:focus-visible,
+.project-link:focus-visible,
+.poster-pdf-link:focus-visible {
+  outline: 3px solid #ffbf1f;
+  outline-offset: 3px;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -607,6 +736,10 @@ h1 span {
 }
 
 @media (max-width: 560px) {
+  .research-publications {
+    grid-template-columns: 1fr;
+  }
+
   .hero,
   .section {
     width: min(100% - 1rem, 1160px);
